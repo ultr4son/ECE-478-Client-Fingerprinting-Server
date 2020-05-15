@@ -1,0 +1,21 @@
+navigator.webdriver
+navigator.language 
+window.screen.colorDepth
+navigator.deviceMemory
+window.devicePixelRatio
+options.screen.detectScreenOrientation
+window.screen.availWidth && window.screen.availHeight
+new Date().getTimezoneOffset()
+window.Intl && window.Intl.DateTimeFormat
+window.sessionStorage
+window.localStorage
+window.indexedDB
+document.body && document.body.addBehavior
+window.openDatabase
+navigator.cpuClass
+navigator.doNotTrack && navigator.msDoNotTrack && window.doNotTrack
+window.swfobject
+navigator.hardwareConcurrency
+navigator.userAgent
+navigator.oscpu
+navigator.platform
