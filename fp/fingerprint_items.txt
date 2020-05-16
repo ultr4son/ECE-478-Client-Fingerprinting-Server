@@ -1,9 +1,25 @@
+Works (Ronan's device {Chrome 81}):
+--------------------------------------------
+navigator.userAgent
+navigator.language 
+window.screen.colorDepth
+navigator.deviceMemory
+window.devicePixelRatio
+window.screen.availWidth
+window.screen.availHeight
+navigator.platform
+navigator.doNotTrack
+.
+.
+.
+
+
+
 navigator.webdriver
 navigator.language 
 window.screen.colorDepth
 navigator.deviceMemory
 window.devicePixelRatio
-options.screen.detectScreenOrientation
 window.screen.availWidth && window.screen.availHeight
 new Date().getTimezoneOffset()
 window.Intl && window.Intl.DateTimeFormat
