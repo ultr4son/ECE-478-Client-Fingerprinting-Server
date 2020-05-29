@@ -10,6 +10,12 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Digital Fingerprinting' });
 });
 
+router.get('/dataview', (req, res, next) => {
+  userInfo = fpModel.find({}, "hashVal hitQuantity").exec((err, result) => {
+    res.render("dataview", { "entries": result});
+  })
+})
+
 router.post('/fetch_api', (req, res, next) => {
 
   console.log("req body: ", req.body, "body result: ", req.body.result);
