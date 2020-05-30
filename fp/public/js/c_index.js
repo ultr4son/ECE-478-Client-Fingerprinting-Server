@@ -3,21 +3,24 @@
 (async () => {
     console.log("Inside self-inv func");
 
-    let testRes = [];
+    let testRes = {};
     let resObj = {};
 
     // add more here - make it cleaner. add functions, etc.
-    testRes.push(navigator.userAgent,
-        navigator.language,
-        window.screen.colorDepth,
-        navigator.deviceMemory,
-        window.devicePixelRatio,
-        window.screen.availWidth,
-        window.screen.availHeight,
-        navigator.platform,
-        navigator.doNotTrack
-    );
-
+    testRes["userAgent"] = navigator.userAgent;
+    testRes["language"] = navigator.language;
+    testRes["colorDepth"]  = window.screen.colorDepth;
+    testRes["deviceMemory"] = window.deviceMemory;
+    testRes["devicePixelRatio"] = window.devicePixelRatio;
+    testRes["availWidth"] = window.screen.availWidth;
+    testRes["availHeight"] = window.screen.availHeight;
+    testRes["platform"] = navigator.platform;
+    testRes["webdriver"] = navigator.webdriver
+    testRes["cpuClass"] = navigator.cpuClass
+    testRes["doNotTrack"] =navigator.doNotTrack || navigator.msDoNotTrack || window.doNotTrack
+    testRes["hardwareConcurrency"] = navigator.hardwareConcurrency
+    testRes["oscpu"] = navigator.oscpu
+    testRes["platform"] = navigator.platform
     resObj['result'] = testRes;
 
     const response = await fetch('/fetch_api', {

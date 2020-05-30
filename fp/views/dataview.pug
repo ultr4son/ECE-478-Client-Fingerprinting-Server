@@ -1,0 +1,19 @@
+html
+    style.
+        table {
+            border-collapse:collapse;
+        }
+        tr, td, th {
+            border:1px solid black;
+        }
+    body
+        table
+            tr
+                each e in entries
+                    each val, key in e
+                        th=key
+            
+            each e in entries
+                tr
+                    each val, key in e
+                        td=val
