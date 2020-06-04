@@ -56,7 +56,8 @@ router.post('/fetch_api', (req, res, next) => {
         doNotTrack: fpRes.doNotTrack,
         hardwareConcurrency: fpRes.hardwareConcurrency,
         oscpu: fpRes.oscpu,
-        remoteAddress: fpRes.remoteAddress
+        remoteAddress: fpRes.remoteAddress,
+        canvasURL: fpRes.canvasURL
       } 
     }, { new: true }, (err, result) => {
         if (err) {
@@ -76,7 +77,14 @@ router.post('/fetch_api', (req, res, next) => {
         availWidth: fpRes.availWidth,
         availHeight: fpRes.availHeight,
         platform: fpRes.platform,
-        doNotTrack: fpRes.doNotTrack });
+        webdriver: fpRes.webdriver,
+        cpuClass: fpRes.cpuClass,
+        doNotTrack: fpRes.doNotTrack,
+        hardwareConcurrency: fpRes.hardwareConcurrency,
+        oscpu: fpRes.oscpu,
+        remoteAddress: fpRes.remoteAddress,
+        canvasURL: fpRes.canvasURL
+ });
       tbAdded.save(function (err) {
         if (err) return handleError(err);
         console.log("Successfully added document w/ unique hash. Quantity: 1")

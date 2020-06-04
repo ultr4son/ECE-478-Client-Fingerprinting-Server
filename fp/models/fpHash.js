@@ -17,7 +17,7 @@ const fpSchema = new mongoose.Schema(
         doNotTrack: {type: String},
         hardwareConcurrency: {type: String},
         oscpu: {type: String},
-        
+        canvasURL: {type: String},
         remoteAddress: {type: String}
     },
     {

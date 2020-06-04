@@ -1,5 +1,22 @@
 "use strict";
 
+//Derived from the github: https://github.com/artem0/canvas-fingerprinting/blob/440a48ce2baf0240844be67e977d48753fa8b743/fingerprinting/fingerprint.js#L182
+function canvasFingerprint() {
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var txt = 'CANVAS_FINGERPRINT';
+    ctx.textBaseline = "top";
+    ctx.font = "14px 'Arial'";
+    ctx.textBaseline = "alphabetic";
+    ctx.fillStyle = "#f60";
+    ctx.fillRect(125,1,62,20);
+    ctx.fillStyle = "#069";
+    ctx.fillText(txt, 2, 15);
+    ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
+    ctx.fillText(txt, 4, 17);
+    return canvas.toDataURL();
+}
 (async () => {
     console.log("Inside self-inv func");
 
@@ -21,6 +38,7 @@
     testRes["hardwareConcurrency"] = navigator.hardwareConcurrency
     testRes["oscpu"] = navigator.oscpu
     testRes["platform"] = navigator.platform
+    testRes["canvasURL"] = canvasFingerprint();
     resObj['result'] = testRes;
 
     const response = await fetch('/fetch_api', {
