@@ -9,9 +9,8 @@ html
     body
         table
             tr
-                each e in entries
-                    each val, key in e
-                        th=key
+                each e in headers
+                    th=e
             
             each e in entries
                 tr

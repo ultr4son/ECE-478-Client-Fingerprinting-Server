@@ -21,7 +21,7 @@ router.get('/dataview', (req, res, next) => {
       return relevant;
     })
 
-    res.render("dataview", { "entries": relevantResults});
+    res.render("dataview", { "entries": relevantResults, "headers": schemaKeys});
   
     
   })
